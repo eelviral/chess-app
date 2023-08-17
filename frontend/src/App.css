@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #222222;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.board-container {
+  width: 600px;
+  height: 600px;
+}
+.board {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.square {
+  width: 12.5%;
+  height: 12.5%;
+  position: relative;
+}
+
+.white-label {
+  color: #deb887;
+}
+
+.black-label {
+  color: #4d3222;
+}
+
+.rank-label,
+.file-label {
+  position: absolute;
+  font-weight: bold;
+  pointer-events: none; /* So that it doesn't interfere with the drag and drop */
+}
+
+.rank-label {
+  top: 5px;
+  left: 5px;
+}
+
+.file-label {
+  bottom: 5px;
+  right: 5px;
+}
+
+.promote-square {
+  width: 50%;
+  height: 50%;
+}
+
+.square-black {
+  background: #4d3222;
+}
+
+.square-white {
+  background: #deb887;
+}
+
+.board-square {
+  width: 100%;
+  height: 100%;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.piece-container {
+  cursor: grab;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.piece {
+  max-width: 70%;
+  max-height: 70%;
+  pointer-events: auto;
+}
+
+.promotion-overlay {
+  position: absolute;
+  top: 0;
+  width: 150%;
+  height: 150%;
+  background-color: #fff;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid black;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.vertical-text {
+  text-orientation: upright;
+  writing-mode: vertical-lr;
+  font-family: sans-serif;
+  padding: 10px;
+  color: #fff;
+}
+
+.vertical-text button {
+  margin-top: 20px;
+  cursor: pointer;
+  background: #3f3f3f;
+  border: 2px solid #fff;
+  border-radius: 10px;
+}
+
+.eight-bit-title {
+  font-family: "Press Start 2P", cursive; /* This is a popular 8-bit style font available on Google Fonts */
+  font-size: 24px;
+  color: #ddd;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
